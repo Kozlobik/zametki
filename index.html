@@ -4,15 +4,26 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
-      <link rel="stylesheet" href="./css/main.css">
+      <link rel="stylesheet" href="./scss/main.css">
    </head>
    <body>
+      <svg display="none">
+         <symbol id="logo" viewBox="0 0 107 145">
+            <g>
+               <rect y="19" width="107" height="107" fill="#D9D9D9"/>
+               <path d="M89.3267 28.7273V116H75.2642L34.142 56.554H33.4176V116H17.608V28.7273H31.7557L72.8352 88.2159H73.6023V28.7273H89.3267Z" fill="black"/>
+            </g>
+         </symbol>
+      </svg>
       <header class="header">
          <div class="container">
             <div class="header__content">
 
                <div class="logo">
                   <!-- svg -->
+                  <svg>
+                     <use xlink:href = '#logo'></use>
+                  </svg>
                </div>
 
                <input type="search" name="" id="" class="search">
@@ -59,6 +70,5 @@
             </div>
          </div>
       </header>
-      <input type="select">
    </body>
 </html>
