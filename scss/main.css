@@ -221,6 +221,8 @@ select:-webkit-autofill:focus {
 
 .header {
   background-color: #007F60;
+  padding-top: 3.5px;
+  padding-bottom: 10px;
 }
 
 .header__content {
@@ -230,17 +232,20 @@ select:-webkit-autofill:focus {
 }
 
 .logo {
-  width: 107px;
-  height: 107px;
+  width: 71px;
+  height: 71px;
 }
 
 .search {
+  padding-left: 5px;
+  padding-right: 5px;
   max-width: 476px;
   width: 100%;
   max-height: 46px;
   background-color: #d9d9d9;
   border-radius: 10px;
   font-size: 2rem;
+  font-family: sans-serif;
 }
 
 .theme {
@@ -248,18 +253,21 @@ select:-webkit-autofill:focus {
   align-items: center;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
+  background-color: #52A66F;
+  padding: 8px 28px;
+  border-radius: 10px;
 }
 
 .night-mode {
-  width: 50px;
-  height: 50px;
+  width: 33px;
+  height: 33px;
   background-color: rgb(0, 38, 108);
   border-radius: 50%;
 }
 
 .color-mode__btn {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background-color: rgb(0, 76, 218);
   border-radius: 50%;
 }
