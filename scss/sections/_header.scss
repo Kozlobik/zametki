@@ -30,6 +30,7 @@
     background-color: #52A66F;
     padding: 8px 28px;
     border-radius: 10px;
+    position: relative;
 }
 .theme__item {
 
@@ -50,12 +51,23 @@
     border-radius: 50%;
 }
 .color-mode__list {
+    background-color: $contextGreen;
+    padding: 10px;
+    border-radius: 10px;
+
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 90px;
+    right: 25px;
 
 }
 .color-mode__item {
+    max-width: 30px;
+    max-height: 30px;
+
+
+&:not(:last-child){
+    margin-bottom: 5px;
+}
 }
 .color-mode__choose-btn {
 }

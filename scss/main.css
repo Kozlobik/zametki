@@ -256,6 +256,7 @@ select:-webkit-autofill:focus {
   background-color: #52A66F;
   padding: 8px 28px;
   border-radius: 10px;
+  position: relative;
 }
 
 .night-mode {
@@ -273,7 +274,18 @@ select:-webkit-autofill:focus {
 }
 
 .color-mode__list {
+  background-color: #52A66F;
+  padding: 10px;
+  border-radius: 10px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 90px;
+  right: 25px;
+}
+
+.color-mode__item {
+  max-width: 30px;
+  max-height: 30px;
+}
+.color-mode__item:not(:last-child) {
+  margin-bottom: 5px;
 }/*# sourceMappingURL=main.css.map */
