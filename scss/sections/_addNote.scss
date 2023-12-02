@@ -1,0 +1,28 @@
+.add-note {
+    padding: 50px 0px;
+}
+.container {
+}
+.add-note__content {
+}
+.input--add {
+    position: absolute;
+
+
+}
+.submit-btn {
+    background-color: $headerBgDefault;
+    padding: 7px 30px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 1.3em;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    right: 0;
+}
+.add-note__form{
+    margin: 0 auto;
+    position: relative;
+    max-width: 476px;
+}

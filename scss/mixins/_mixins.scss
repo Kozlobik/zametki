@@ -1,0 +1,36 @@
+@mixin hover-element($deg){
+    transition: transform 0.5s;
+    &:hover{
+        transform: rotate($deg);
+    }
+}
+
+@mixin active-element{
+    &:active{
+        box-shadow: 0px 0px 0px 3px #00e868;
+    }
+}
+
+@mixin focus-element{
+    &{
+        position: relative;
+    }
+
+    &:before{
+        content: '';
+        display: inline-block;
+        width: 110%;
+        height: 110%;
+        border: 2px red solid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:focus{
+        &:before{
+            border-color: #00e868;  
+        }
+    }
+}

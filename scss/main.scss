@@ -3,11 +3,15 @@
 @import './base/vars';
 @import './base/reset';
 @import './base/base';
+
+// mixins
+@import './mixins/mixins';
+
 // blocks
 
 // sections
 @import './sections/header';
-
+@import './sections/addNote';
 
 // other sections
 

@@ -52,7 +52,6 @@ input, textarea, button, select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  background-color: transparent;
 }
 
 input::-ms-clear {
@@ -62,8 +61,6 @@ input::-ms-clear {
 button, input[type=submit] {
   display: inline-block;
   box-shadow: none;
-  background-color: transparent;
-  background: none;
   cursor: pointer;
 }
 
@@ -236,7 +233,7 @@ select:-webkit-autofill:focus {
   height: 71px;
 }
 
-.search {
+.input {
   padding-left: 5px;
   padding-right: 5px;
   max-width: 476px;
@@ -246,6 +243,23 @@ select:-webkit-autofill:focus {
   border-radius: 10px;
   font-size: 2rem;
   font-family: sans-serif;
+}
+.input {
+  position: relative;
+}
+.input:before {
+  content: "";
+  display: inline-block;
+  width: 110%;
+  height: 110%;
+  border: 2px red solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.input:focus:before {
+  border-color: #00e868;
 }
 
 .theme {
@@ -271,12 +285,20 @@ select:-webkit-autofill:focus {
   height: 40px;
   background-color: rgb(0, 76, 218);
   border-radius: 50%;
+  transition: transform 0.5s;
+}
+.color-mode__btn:hover {
+  transform: rotate(180deg);
+}
+.color-mode__btn:active {
+  box-shadow: 0px 0px 0px 3px #00e868;
 }
 
 .color-mode__list {
   background-color: #52A66F;
   padding: 10px;
   border-radius: 10px;
+  display: none;
   position: absolute;
   top: 90px;
   right: 25px;
@@ -285,7 +307,37 @@ select:-webkit-autofill:focus {
 .color-mode__item {
   max-width: 30px;
   max-height: 30px;
+  transition: transform 0.5s;
+}
+.color-mode__item:hover {
+  transform: rotate(360deg);
 }
 .color-mode__item:not(:last-child) {
   margin-bottom: 5px;
+}
+
+.add-note {
+  padding: 50px 0px;
+}
+
+.input--add {
+  position: absolute;
+}
+
+.submit-btn {
+  background-color: #007F60;
+  padding: 7px 30px;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 1.3em;
+  color: white;
+  font-family: sans-serif;
+  position: absolute;
+  right: 0;
+}
+
+.add-note__form {
+  margin: 0 auto;
+  position: relative;
+  max-width: 476px;
 }/*# sourceMappingURL=main.css.map */
