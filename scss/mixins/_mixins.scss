@@ -34,3 +34,11 @@
         }
     }
 }
+
+@mixin hover-add-btn{
+    &:hover{
+        border-color: $contextGreen;
+        background-color: white;
+        color: $headerBgDefault;
+    }
+}

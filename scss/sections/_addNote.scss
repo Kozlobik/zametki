@@ -7,10 +7,12 @@
 }
 .input--add {
     position: absolute;
-
-
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 110px;
 }
 .submit-btn {
+    border: 2px solid transparent;
     background-color: $headerBgDefault;
     padding: 7px 30px;
     border-radius: 10px;
@@ -20,6 +22,9 @@
     font-family: sans-serif;
     position: absolute;
     right: 0;
+    transition: 0.5s; 
+
+    @include hover-add-btn
 }
 .add-note__form{
     margin: 0 auto;
