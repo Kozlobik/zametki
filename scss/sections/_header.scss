@@ -12,7 +12,7 @@
     width: 71px;
     height: 71px;
 }
-.input {
+.input{
     padding-left: 5px;
     padding-right: 5px;
     max-width: 476px;
@@ -22,6 +22,10 @@
     border-radius: 10px;
     font-size: 2rem;
     font-family: sans-serif;
+
+    &--search{
+        transform: translateX(40px)
+    }
 
     @include focus-element;
 }

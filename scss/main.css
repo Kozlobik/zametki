@@ -244,6 +244,9 @@ select:-webkit-autofill:focus {
   font-size: 2rem;
   font-family: sans-serif;
 }
+.input--search {
+  transform: translateX(40px);
+}
 .input {
   position: relative;
 }
