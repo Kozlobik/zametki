@@ -319,6 +319,13 @@ select:-webkit-autofill:focus {
   margin-bottom: 5px;
 }
 
+.svg-icon {
+  width: 66px;
+  height: 66px;
+  padding-top: px;
+  padding-bottom: px;
+}
+
 .add-note {
   padding: 50px 0px;
 }
@@ -353,4 +360,39 @@ select:-webkit-autofill:focus {
   margin: 0 auto;
   position: relative;
   max-width: 476px;
+}
+
+.notes {
+  padding-top: 50px;
+}
+
+.note {
+  background-color: #d9d9d9;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note__text {
+  background-color: #007F60;
+}
+
+.note__menu {
+  background-color: #007F60;
+  padding: 18px 42px;
+  right: 0;
+}
+
+.note__menu-dotes {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  display: block;
+}
+.note__menu-dotes:not(:last-child) {
+  margin-bottom: 5px;
 }/*# sourceMappingURL=main.css.map */
