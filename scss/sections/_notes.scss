@@ -8,6 +8,7 @@
 .notes__list {
 }
 .note {
+    min-height: 70px; 
     background-color: $bgElementDefault;
     max-width: 80%;
     margin: 0 auto;
@@ -18,27 +19,16 @@
     align-items: center;
     justify-content: space-between;
 }
-.note__icon-star {
-
+.star-svg {
+    width: 45px;
+    height: 45px;
 }
 .note__text {
-    background-color: $headerBgDefault;
-    
-}
-.note__menu {
-    background-color: $headerBgDefault;
-    padding: 18px 42px;
-
-    right: 0;
-}
-.note__menu-dotes {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: black;
-    display: block;
-
-    &:not(:last-child){
-        margin-bottom: 5px;
-    }
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 1.7em;
+    max-width: 70%;
+    width: 100%;
+    min-height: 70px;
+    resize: none;
 }
