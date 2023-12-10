@@ -42,3 +42,19 @@
         color: $headerBgDefault;
     }
 }
+
+@mixin hover-trash-btn{
+    &:hover{
+        background-color: #AC0000;
+        .trash-svg{
+            fill: white;
+        }
+    }
+}
+
+@mixin active-trash-btn{
+    &:active{
+        background-color: #6f0000;
+        transition: 0ms;
+    }
+}

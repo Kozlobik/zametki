@@ -301,10 +301,11 @@ select:-webkit-autofill:focus {
   background-color: #52A66F;
   padding: 10px;
   border-radius: 10px;
-  display: none;
   position: absolute;
   top: 90px;
   right: 25px;
+  transform: translateY(-200%);
+  opacity: 0;
 }
 
 .color-mode__item {
@@ -317,6 +318,10 @@ select:-webkit-autofill:focus {
 }
 .color-mode__item:not(:last-child) {
   margin-bottom: 5px;
+}
+
+.color-mode__choose-btn {
+  background-color: transparent;
 }
 
 .svg-icon {
@@ -390,4 +395,27 @@ select:-webkit-autofill:focus {
   width: 100%;
   min-height: 70px;
   resize: none;
+}
+
+.trash-btn {
+  background-color: rgb(255, 113, 113);
+  padding: 18px 15px;
+  transition: 500ms;
+}
+.trash-btn:hover {
+  background-color: #AC0000;
+}
+.trash-btn:hover .trash-svg {
+  fill: white;
+}
+.trash-btn:active {
+  background-color: #6f0000;
+  transition: 0ms;
+}
+
+.trash-svg {
+  width: 30px;
+  height: 30px;
+  fill: #000;
+  transition: 500ms;
 }/*# sourceMappingURL=main.css.map */

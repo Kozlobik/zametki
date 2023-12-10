@@ -32,3 +32,18 @@
     min-height: 70px;
     resize: none;
 }
+
+.trash-btn{
+    background-color: rgb(255, 113, 113);
+    padding: 18px 15px;
+    transition: 500ms;
+    @include hover-trash-btn;
+    @include active-trash-btn;
+}
+
+.trash-svg{
+    width: 30px;
+    height: 30px;
+    fill: #000;
+    transition: 500ms;
+}

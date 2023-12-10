@@ -63,11 +63,11 @@
     background-color: $contextGreen;
     padding: 10px;
     border-radius: 10px;
-    display: none;
     position: absolute;
     top: 90px;
     right: 25px;
-
+    transform: translateY(-200%);
+    opacity: 0;
 }
 .color-mode__item {
     max-width: 30px;
@@ -79,6 +79,7 @@
 }
 }
 .color-mode__choose-btn {
+    background-color: transparent;
 }
 
 .svg-icon{
