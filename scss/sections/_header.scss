@@ -37,9 +37,9 @@
     padding: 8px 28px;
     border-radius: 10px;
     position: relative;
+    min-width: 150px;
 }
 .theme__item {
-
 }
 .night-mode {
     width: 33px;
@@ -64,11 +64,16 @@
     padding: 10px;
     border-radius: 10px;
     position: absolute;
-    top: 90px;
+    top: -350%;
     right: 25px;
-    transform: translateY(-200%);
     opacity: 0;
-}
+    transition: 500ms;
+
+    &.open{
+        top: 90px;
+        opacity: 1;
+    }
+    }
 .color-mode__item {
     max-width: 30px;
     max-height: 30px;

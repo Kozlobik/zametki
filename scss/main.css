@@ -274,6 +274,7 @@ select:-webkit-autofill:focus {
   padding: 8px 28px;
   border-radius: 10px;
   position: relative;
+  min-width: 150px;
 }
 
 .night-mode {
@@ -302,10 +303,14 @@ select:-webkit-autofill:focus {
   padding: 10px;
   border-radius: 10px;
   position: absolute;
-  top: 90px;
+  top: -350%;
   right: 25px;
-  transform: translateY(-200%);
   opacity: 0;
+  transition: 500ms;
+}
+.color-mode__list.open {
+  top: 90px;
+  opacity: 1;
 }
 
 .color-mode__item {
