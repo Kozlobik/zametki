@@ -7,8 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     colorModeItem.forEach((btn) => {
         btn.addEventListener('click', () => {
             colorModeMenu.classList.remove('open')
+            
+            if (btn.dataset.color) {
+                console.log(btn.dataset.color);
+                console.log(document.body);
+            }
         })
     })
+
+
 
     colorModeBtn.addEventListener('click', () => {
         colorModeMenu.classList.toggle('open')
