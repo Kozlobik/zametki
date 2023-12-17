@@ -1,0 +1,38 @@
+// body green theme
+
+body.green{
+    background-color: $backgroundColorDefault;
+
+    .header{
+        background-color: $headerBgDefault;
+    }
+
+    .theme{
+        background-color: $contextGreen;
+    }
+
+    .submit-btn{
+        background-color: $headerBgDefault;
+    }
+}
+
+// body yellow theme
+
+body.yellow{
+    background-color: #FFE9BD;
+
+    .header{
+        background-color: $headerBgYellow;
+    }
+
+    .theme{
+        background-color: $contextYellow;
+    }
+
+    .submit-btn{
+        background-color: $headerBgYellow;
+    }
+}
+
+
+//

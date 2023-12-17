@@ -216,6 +216,32 @@ select:-webkit-autofill:focus {
   margin-top: auto; /* sticky footer */
 }
 
+body.green {
+  background-color: #daffee;
+}
+body.green .header {
+  background-color: #007F60;
+}
+body.green .theme {
+  background-color: #52A66F;
+}
+body.green .submit-btn {
+  background-color: #007F60;
+}
+
+body.yellow {
+  background-color: #FFE9BD;
+}
+body.yellow .header {
+  background-color: rgb(255, 211, 37);
+}
+body.yellow .theme {
+  background-color: #ffe278;
+}
+body.yellow .submit-btn {
+  background-color: rgb(255, 211, 37);
+}
+
 .header {
   background-color: #007F60;
   padding-top: 3.5px;

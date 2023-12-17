@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
             colorModeMenu.classList.remove('open')
             
             if (btn.dataset.color) {
-                console.log(btn.dataset.color);
-                console.log(document.body);
+                document.body.className = '';
+                document.body.classList.add(`${btn.dataset.color}`);
+
             }
         })
     })
