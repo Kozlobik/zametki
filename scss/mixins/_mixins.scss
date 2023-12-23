@@ -5,9 +5,9 @@
     }
 }
 
-@mixin active-element{
+@mixin active-element($color){
     &:active{
-        box-shadow: 0px 0px 0px 3px #00e868;
+        box-shadow: 0px 0px 0px 3px $color;
     }
 }
 

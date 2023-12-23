@@ -216,9 +216,6 @@ select:-webkit-autofill:focus {
   margin-top: auto; /* sticky footer */
 }
 
-body.green {
-  background-color: #daffee;
-}
 body.green .header {
   background-color: #007F60;
 }
@@ -228,10 +225,19 @@ body.green .theme {
 body.green .submit-btn {
   background-color: #007F60;
 }
-
-body.yellow {
-  background-color: #FFE9BD;
+body.green .first-part {
+  fill: #A0FFD1;
 }
+body.green .second-part {
+  fill: #007F60;
+}
+body.green .color-mode__list {
+  background-color: #52A66F;
+}
+body.green .color-mode__btn:active {
+  box-shadow: 0px 0px 0px 3px #1ee062;
+}
+
 body.yellow .header {
   background-color: rgb(255, 211, 37);
 }
@@ -241,9 +247,86 @@ body.yellow .theme {
 body.yellow .submit-btn {
   background-color: rgb(255, 211, 37);
 }
+body.yellow .first-part {
+  fill: #FFDE9E;
+}
+body.yellow .second-part {
+  fill: rgb(255, 211, 37);
+}
+body.yellow .color-mode__list {
+  background-color: #ffe278;
+}
+body.yellow .color-mode__btn:active {
+  box-shadow: 0px 0px 0px 3px #ffcc25;
+}
+
+body.purple .header {
+  background-color: #761dba;
+}
+body.purple .theme {
+  background-color: #b260ff;
+}
+body.purple .submit-btn {
+  background-color: #761dba;
+}
+body.purple .first-part {
+  fill: #E0B8FF;
+}
+body.purple .second-part {
+  fill: #761dba;
+}
+body.purple .color-mode__list {
+  background-color: #b260ff;
+}
+body.purple .color-mode__btn:active {
+  box-shadow: 0px 0px 0px 3px #9f39ff;
+}
+
+body.blue .header {
+  background-color: #2a46ff;
+}
+body.blue .theme {
+  background-color: #3284ff;
+}
+body.blue .submit-btn {
+  background-color: #2a46ff;
+}
+body.blue .first-part {
+  fill: #A7C0FF;
+}
+body.blue .second-part {
+  fill: #2a46ff;
+}
+body.blue .color-mode__list {
+  background-color: #3284ff;
+}
+body.blue .color-mode__btn:active {
+  box-shadow: 0px 0px 0px 3px #5599ff;
+}
+
+body.red .header {
+  background-color: #ab3333;
+}
+body.red .theme {
+  background-color: #fc7c7c;
+}
+body.red .submit-btn {
+  background-color: #ab3333;
+}
+body.red .first-part {
+  fill: #FFA4A4;
+}
+body.red .second-part {
+  fill: #ab3333;
+}
+body.red .color-mode__list {
+  background-color: #fc7c7c;
+}
+body.red .color-mode__btn:active {
+  box-shadow: 0px 0px 0px 3px #ff4545;
+}
 
 .header {
-  background-color: #007F60;
   padding-top: 3.5px;
   padding-bottom: 10px;
 }
@@ -296,7 +379,6 @@ body.yellow .submit-btn {
   align-items: center;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
-  background-color: #52A66F;
   padding: 8px 28px;
   border-radius: 10px;
   position: relative;
@@ -320,12 +402,8 @@ body.yellow .submit-btn {
 .color-mode__btn:hover {
   transform: rotate(180deg);
 }
-.color-mode__btn:active {
-  box-shadow: 0px 0px 0px 3px #00e868;
-}
 
 .color-mode__list {
-  background-color: #52A66F;
   padding: 10px;
   border-radius: 10px;
   position: absolute;
@@ -375,7 +453,6 @@ body.yellow .submit-btn {
 
 .submit-btn {
   border: 2px solid transparent;
-  background-color: #007F60;
   padding: 7px 30px;
   border-radius: 10px;
   font-weight: 900;

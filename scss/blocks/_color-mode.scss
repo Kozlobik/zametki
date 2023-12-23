@@ -1,7 +1,6 @@
 // body green theme
 
 body.green{
-    background-color: $backgroundColorDefault;
 
     .header{
         background-color: $headerBgDefault;
@@ -14,12 +13,27 @@ body.green{
     .submit-btn{
         background-color: $headerBgDefault;
     }
+
+    .first-part{
+        fill: $backgroundColorDefault;
+    }
+
+    .second-part{
+        fill: $headerBgDefault;
+    }
+
+    .color-mode__list{
+        background-color: $contextGreen;
+    }
+
+    .color-mode__btn{
+        @include active-element($shadowGreen);
+    }
 }
 
 // body yellow theme
 
 body.yellow{
-    background-color: #FFE9BD;
 
     .header{
         background-color: $headerBgYellow;
@@ -32,7 +46,118 @@ body.yellow{
     .submit-btn{
         background-color: $headerBgYellow;
     }
+
+    .first-part{
+        fill: $backgroundColorYellow;
+    }
+
+    .second-part{
+        fill: $headerBgYellow;
+    }
+
+    .color-mode__list{
+        background-color: $contextYellow;
+    }
+
+    .color-mode__btn{
+        @include active-element(#ffcc25);
+    }
 }
 
 
-//
+// body purple theme
+
+body.purple{
+
+    .header{
+        background-color: $headerBgPurple;
+    }
+
+    .theme{
+        background-color: $contextPurple;
+    }
+
+    .submit-btn{
+        background-color: $headerBgPurple;
+    }
+
+    .first-part{
+        fill: $backgroundColorPurple;
+    }
+
+    .second-part{
+        fill: $headerBgPurple;
+    }
+
+    .color-mode__list{
+        background-color: $contextPurple;
+    }
+
+    .color-mode__btn{
+        @include active-element($shadowPurple);
+    }
+}
+
+// body blue theme
+
+body.blue{
+
+    .header{
+        background-color: $headerBgBlue;
+    }
+
+    .theme{
+        background-color: $contextBlue;
+    }
+
+    .submit-btn{
+        background-color: $headerBgBlue;
+    }
+    .first-part{
+        fill: $backgroundColorBlue;
+    }
+
+    .second-part{
+        fill: $headerBgBlue;
+    }
+
+    .color-mode__list{
+        background-color: $contextBlue;
+    }
+
+    .color-mode__btn{
+        @include active-element($shadowBlue);
+    }
+}
+
+// body red theme
+
+body.red{
+
+    .header{
+        background-color: $headerBgRed;
+    }
+
+    .theme{
+        background-color: $contextRed;
+    }
+
+    .submit-btn{
+        background-color: $headerBgRed;
+    }
+    .first-part{
+        fill: $backgroundColorRed;
+    }
+
+    .second-part{
+        fill: $headerBgRed;
+    }
+
+    .color-mode__list{
+        background-color: $contextRed;
+    }
+
+    .color-mode__btn{
+        @include active-element($shadowRed);
+    }
+}
