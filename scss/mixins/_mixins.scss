@@ -35,11 +35,11 @@
     }
 }
 
-@mixin hover-add-btn{
+@mixin hover-add-btn($colorBorder, $colorText){
     &:hover{
-        border-color: $contextGreen;
+        border-color: $colorBorder;
         background-color: white;
-        color: $headerBgDefault;
+        color: $colorText;
     }
 }
 

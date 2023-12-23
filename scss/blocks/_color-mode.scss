@@ -29,6 +29,10 @@ body.green{
     .color-mode__btn{
         @include active-element($shadowGreen);
     }
+
+    .submit-btn{
+        @include hover-add-btn($headerBgDefault, $headerBgDefault)
+    }
 }
 
 // body yellow theme
@@ -61,6 +65,10 @@ body.yellow{
 
     .color-mode__btn{
         @include active-element(#ffcc25);
+    }
+
+    .submit-btn{
+        @include hover-add-btn($headerBgYellow, $headerBgYellow)
     }
 }
 
@@ -96,6 +104,10 @@ body.purple{
     .color-mode__btn{
         @include active-element($shadowPurple);
     }
+
+    .submit-btn{
+        @include hover-add-btn($headerBgPurple, $headerBgPurple)
+    }
 }
 
 // body blue theme
@@ -128,6 +140,10 @@ body.blue{
     .color-mode__btn{
         @include active-element($shadowBlue);
     }
+
+    .submit-btn{
+        @include hover-add-btn($headerBgBlue, $headerBgBlue)
+    }
 }
 
 // body red theme
@@ -159,5 +175,9 @@ body.red{
 
     .color-mode__btn{
         @include active-element($shadowRed);
+    }
+
+    .submit-btn{
+        @include hover-add-btn($headerBgRed, $headerBgRed)
     }
 }
