@@ -33,6 +33,10 @@ body.green{
     .submit-btn{
         @include hover-add-btn($headerBgDefault, $headerBgDefault)
     }
+
+    .night-mode{
+        background-color: $headerBgDefault;
+    }
 }
 
 // body yellow theme
@@ -69,6 +73,10 @@ body.yellow{
 
     .submit-btn{
         @include hover-add-btn($headerBgYellow, $headerBgYellow)
+    }
+
+    .night-mode{
+        background-color: $headerBgYellow;
     }
 }
 
@@ -108,6 +116,10 @@ body.purple{
     .submit-btn{
         @include hover-add-btn($headerBgPurple, $headerBgPurple)
     }
+
+    .night-mode{
+        background-color: $headerBgPurple;
+    }
 }
 
 // body blue theme
@@ -144,6 +156,10 @@ body.blue{
     .submit-btn{
         @include hover-add-btn($headerBgBlue, $headerBgBlue)
     }
+
+    .night-mode{
+        background-color: $headerBgBlue;
+    }
 }
 
 // body red theme
@@ -179,5 +195,27 @@ body.red{
 
     .submit-btn{
         @include hover-add-btn($headerBgRed, $headerBgRed)
+    }
+
+    .night-mode{
+        background-color: $headerBgRed;
+    }
+}
+
+
+
+
+
+// NIGHT MODE
+
+body.dark-mode{
+    background-color: #2a2926;
+    
+    .input{
+        background-color: #474541;
+        color: #f0e3ca;
+    }
+    .note{
+        background-color: #474541;
     }
 }

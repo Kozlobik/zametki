@@ -242,48 +242,54 @@ body.green .submit-btn:hover {
   background-color: white;
   color: #007F60;
 }
+body.green .night-mode {
+  background-color: #007F60;
+}
 
 body.yellow .header {
-  background-color: rgb(255, 211, 37);
+  background-color: rgb(255, 174, 0);
 }
 body.yellow .theme {
-  background-color: #ffe278;
+  background-color: rgb(255, 205, 69);
 }
 body.yellow .submit-btn {
-  background-color: rgb(255, 211, 37);
+  background-color: rgb(255, 174, 0);
 }
 body.yellow .first-part {
   fill: #FFDE9E;
 }
 body.yellow .second-part {
-  fill: rgb(255, 211, 37);
+  fill: rgb(255, 174, 0);
 }
 body.yellow .color-mode__list {
-  background-color: #ffe278;
+  background-color: rgb(255, 205, 69);
 }
 body.yellow .color-mode__btn:active {
   box-shadow: 0px 0px 0px 3px #ffcc25;
 }
 body.yellow .submit-btn:hover {
-  border-color: rgb(255, 211, 37);
+  border-color: rgb(255, 174, 0);
   background-color: white;
-  color: rgb(255, 211, 37);
+  color: rgb(255, 174, 0);
+}
+body.yellow .night-mode {
+  background-color: rgb(255, 174, 0);
 }
 
 body.purple .header {
-  background-color: #761dba;
+  background-color: #8e2fa6;
 }
 body.purple .theme {
   background-color: #b260ff;
 }
 body.purple .submit-btn {
-  background-color: #761dba;
+  background-color: #8e2fa6;
 }
 body.purple .first-part {
   fill: #E0B8FF;
 }
 body.purple .second-part {
-  fill: #761dba;
+  fill: #8e2fa6;
 }
 body.purple .color-mode__list {
   background-color: #b260ff;
@@ -292,9 +298,12 @@ body.purple .color-mode__btn:active {
   box-shadow: 0px 0px 0px 3px #9f39ff;
 }
 body.purple .submit-btn:hover {
-  border-color: #761dba;
+  border-color: #8e2fa6;
   background-color: white;
-  color: #761dba;
+  color: #8e2fa6;
+}
+body.purple .night-mode {
+  background-color: #8e2fa6;
 }
 
 body.blue .header {
@@ -323,6 +332,9 @@ body.blue .submit-btn:hover {
   background-color: white;
   color: #2a46ff;
 }
+body.blue .night-mode {
+  background-color: #2a46ff;
+}
 
 body.red .header {
   background-color: #ab3333;
@@ -349,6 +361,20 @@ body.red .submit-btn:hover {
   border-color: #ab3333;
   background-color: white;
   color: #ab3333;
+}
+body.red .night-mode {
+  background-color: #ab3333;
+}
+
+body.dark-mode {
+  background-color: #2a2926;
+}
+body.dark-mode .input {
+  background-color: #474541;
+  color: #f0e3ca;
+}
+body.dark-mode .note {
+  background-color: #474541;
 }
 
 .header {
@@ -413,14 +439,13 @@ body.red .submit-btn:hover {
 .night-mode {
   width: 33px;
   height: 33px;
-  background-color: rgb(0, 38, 108);
   border-radius: 50%;
+  background-color: transparent;
 }
 
 .color-mode__btn {
   width: 40px;
   height: 40px;
-  background-color: rgb(0, 76, 218);
   border-radius: 50%;
   transition: transform 0.5s;
 }
@@ -508,6 +533,7 @@ body.red .submit-btn:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 500ms;
 }
 
 .star-svg {
