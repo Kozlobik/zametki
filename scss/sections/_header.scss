@@ -23,7 +23,7 @@
     font-family: sans-serif;
 
     &--search{
-        transform: translateX(40px)
+        transform: translateX(40px);
     }
 
     @include focus-element;

@@ -31,11 +31,17 @@ body.green{
     }
 
     .submit-btn{
-        @include hover-add-btn($headerBgDefault, $headerBgDefault)
+        @include hover-add-btn($headerBgDefault, $headerBgDefault, $bgLightBodyColor)
     }
 
     .night-mode{
         background-color: $headerBgDefault;
+    }
+}
+
+body.green.dark-mode{
+    .submit-btn{
+        @include hover-add-btn($headerBgDefault, $headerBgDefault, $darkModeBackground)
     }
 }
 
@@ -72,7 +78,7 @@ body.yellow{
     }
 
     .submit-btn{
-        @include hover-add-btn($headerBgYellow, $headerBgYellow)
+        @include hover-add-btn($headerBgYellow, $headerBgYellow, $bgLightBodyColor)
     }
 
     .night-mode{
@@ -80,6 +86,11 @@ body.yellow{
     }
 }
 
+body.yellow.dark-mode{
+    .submit-btn{
+        @include hover-add-btn($headerBgYellow, $headerBgYellow, $darkModeBackground)
+    }
+}
 
 // body purple theme
 
@@ -114,11 +125,17 @@ body.purple{
     }
 
     .submit-btn{
-        @include hover-add-btn($headerBgPurple, $headerBgPurple)
+        @include hover-add-btn($headerBgPurple, $headerBgPurple, $bgLightBodyColor)
     }
 
     .night-mode{
         background-color: $headerBgPurple;
+    }
+}
+
+body.purple.dark-mode{
+    .submit-btn{
+        @include hover-add-btn($headerBgPurple, $headerBgPurple, $darkModeBackground)
     }
 }
 
@@ -154,11 +171,17 @@ body.blue{
     }
 
     .submit-btn{
-        @include hover-add-btn($headerBgBlue, $headerBgBlue)
+        @include hover-add-btn($headerBgBlue, $headerBgBlue, $bgLightBodyColor)
     }
 
     .night-mode{
         background-color: $headerBgBlue;
+    }
+}
+
+body.blue.dark-mode{
+    .submit-btn{
+        @include hover-add-btn($headerBgBlue, $headerBgBlue, $darkModeBackground)
     }
 }
 
@@ -194,7 +217,7 @@ body.red{
     }
 
     .submit-btn{
-        @include hover-add-btn($headerBgRed, $headerBgRed)
+        @include hover-add-btn($headerBgRed, $headerBgRed, $bgLightBodyColor)
     }
 
     .night-mode{
@@ -202,20 +225,24 @@ body.red{
     }
 }
 
-
+body.red.dark-mode{
+    .submit-btn{
+        @include hover-add-btn($headerBgRed, $headerBgRed, $darkModeBackground)
+    }
+}
 
 
 
 // NIGHT MODE
 
 body.dark-mode{
-    background-color: #2a2926;
+    background-color: $darkModeBackground;
     
     .input{
-        background-color: #474541;
-        color: #f0e3ca;
+        background-color: $darkModeInputColor;
+        color: $darkModeTextColor;
     }
     .note{
-        background-color: #474541;
+        background-color: $darkModeInputColor;
     }
 }

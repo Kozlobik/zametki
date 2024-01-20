@@ -35,10 +35,10 @@
     }
 }
 
-@mixin hover-add-btn($colorBorder, $colorText){
+@mixin hover-add-btn($colorBorder, $colorText, $bgColor){
     &:hover{
         border-color: $colorBorder;
-        background-color: white;
+        background-color: $bgColor;
         color: $colorText;
     }
 }
