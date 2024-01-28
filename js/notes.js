@@ -7,14 +7,21 @@
 const addNoteInput = document.querySelector('#inputAdd');
 const addNoteForm = document.querySelector('#addNoteForm');
 const notesList = document.querySelector('.notes__list');
-const allNotes = [];
+const allNotes = JSON.parse(localStorage.getItem('allNotes')) || [];
+
+
 
 const pushNewNote = () => {
     let addNoteInputValue = addNoteInput.value.trim();
     if (addNoteInputValue.length > 0) {
+
         renderNote(addNoteInputValue)
+
         allNotes.push(addNoteInputValue)
+
         addToLocal(allNotes);
+        
+
     }
     else if (addNoteInputValue.length === 0) {
         alert('введите заметку!!!!!!!!! 0=')
@@ -45,4 +52,29 @@ const renderNote = (addNoteInputValue) => {
     `;
     notesList.insertAdjacentHTML('afterbegin', note);
 }
+
+const showAllNotes = (allNotes) => {
+    allNotes.forEach(element => {
+        const note = 
+        `
+        <li class="note">
+        <div class="note__icon-star">
+           <svg class="star-svg">
+              <use xlink:href = "#star"></use>
+           </svg>
+        </div>
+        <textarea class="note__text">${element}</textarea>
+        <button class="trash-btn">
+           <svg class="trash-svg">
+              <use xlink:href = "#trash"></use>
+           </svg>
+        </button>
+     </li>
+        `;
+        notesList.insertAdjacentHTML('afterbegin', note);
+    });
+}
+
+showAllNotes(allNotes);
+
 addNoteForm.addEventListener('submit', pushNewNote);
