@@ -1,15 +1,7 @@
-// const allNotes = ['Yabloko', 'banan', 'ogurec'];
-
-// localStorage.setItem('allNotes', JSON.stringify(allNotes));
-
-// const arrayParse = JSON.parse(localStorage.getItem('allNotes'));
-
 const addNoteInput = document.querySelector('#inputAdd');
 const addNoteForm = document.querySelector('#addNoteForm');
 const notesList = document.querySelector('.notes__list');
 const allNotes = JSON.parse(localStorage.getItem('allNotes')) || [];
-
-
 
 const pushNewNote = () => {
     let addNoteInputValue = addNoteInput.value.trim();
@@ -75,6 +67,21 @@ const showAllNotes = (allNotes) => {
     });
 }
 
+const delNote = () => {
+   console.log("Click to the trash");
+}
+
 showAllNotes(allNotes);
 
 addNoteForm.addEventListener('submit', pushNewNote);
+
+notesList.addEventListener('click', (e) => {
+
+   const trashBtn = e.target;
+   if (trashBtn.closest('.trash-btn')) {
+      const currentNote = trashBtn.closest('.note');
+      const noteInput = currentNote.querySelector('.note__text');
+      const noteText = noteInput.value;
+      console.log(noteText);
+   }
+})
