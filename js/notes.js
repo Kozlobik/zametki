@@ -1,7 +1,10 @@
+// Глобальные переменные.
 const addNoteInput = document.querySelector('#inputAdd');
 const addNoteForm = document.querySelector('#addNoteForm');
 const notesList = document.querySelector('.notes__list');
 const allNotes = JSON.parse(localStorage.getItem('allNotes')) || [];
+
+// Функции.
 
 const pushNewNote = () => {
     let addNoteInputValue = addNoteInput.value.trim();
@@ -13,7 +16,7 @@ const pushNewNote = () => {
 
         addToLocal(allNotes);
         
-
+        delTextFromAddInput();
     }
     else if (addNoteInputValue.length === 0) {
         alert('введите заметку!!!!!!!!! 0=')
@@ -76,9 +79,16 @@ const delNoteFromRender = (currentNote) => {
    currentNote.remove()
 }
 
+const delTextFromAddInput = () => {
+   addNoteInput.value = '';
+}
+
+// События.
+
 showAllNotes(allNotes);
 
 addNoteForm.addEventListener('submit', pushNewNote);
+
 
 notesList.addEventListener('click', (e) => {
    const trashBtn = e.target;
