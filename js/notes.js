@@ -22,7 +22,7 @@ const pushNewNote = () => {
 }
 
 const addToLocal = (allNotes) => {
-    localStorage.setItem('allNotes', JSON.stringify(allNotes));
+   localStorage.setItem('allNotes', JSON.stringify(allNotes));
 }
 
 const renderNote = (addNoteInputValue) => {
@@ -67,8 +67,13 @@ const showAllNotes = (allNotes) => {
     });
 }
 
-const delNote = () => {
-   console.log("Click to the trash");
+const delNoteFromStorage = (noteText) => {
+   const noteIndex = allNotes.indexOf(noteText);
+   allNotes.splice(noteIndex, 1);
+   addToLocal(allNotes);
+}
+const delNoteFromRender = (currentNote) => {
+   currentNote.remove()
 }
 
 showAllNotes(allNotes);
@@ -76,12 +81,17 @@ showAllNotes(allNotes);
 addNoteForm.addEventListener('submit', pushNewNote);
 
 notesList.addEventListener('click', (e) => {
-
    const trashBtn = e.target;
+
    if (trashBtn.closest('.trash-btn')) {
       const currentNote = trashBtn.closest('.note');
       const noteInput = currentNote.querySelector('.note__text');
       const noteText = noteInput.value;
-      console.log(noteText);
+      delNoteFromStorage(noteText);
+      delNoteFromRender(currentNote)
    }
 })
+
+// 1. Delite note from array.
+// 2. Add updated array to local storagę.
+// 3. Remove ńote from render.
