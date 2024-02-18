@@ -3,6 +3,7 @@ const addNoteInput = document.querySelector('#inputAdd');
 const addNoteForm = document.querySelector('#addNoteForm');
 const notesList = document.querySelector('.notes__list');
 const allNotes = JSON.parse(localStorage.getItem('allNotes')) || [];
+const searchNoteInput = document.querySelector('#input-search');
 
 // Функции.
 
@@ -83,6 +84,20 @@ const delTextFromAddInput = () => {
    addNoteInput.value = '';
 }
 
+const filtreNotes = () => {
+   const searchNoteInputValue = searchNoteInput.value;
+   const allTextAreas = document.querySelectorAll('.note__text');
+
+   allTextAreas.forEach(element => {
+      let noteTextValue = element.value;
+      if(noteTextValue.indexOf(searchNoteInputValue) == -1){
+         element.closest('.note').style.display = 'none';
+      }  
+      else{
+         element.closest('.note').style.display = 'flex';
+      }
+   })
+}
 // События.
 
 showAllNotes(allNotes);
@@ -102,6 +117,13 @@ notesList.addEventListener('click', (e) => {
    }
 })
 
-// 1. Delite note from array.
-// 2. Add updated array to local storagę.
-// 3. Remove ńote from render.
+
+
+
+searchNoteInput.addEventListener('keyup', filtreNotes);
+
+
+
+// 1. Отслеживать изменения в инпуте. + 
+// 2. Проводить поиск значний серч инпута в заметках на странице.
+// 2.2 Если введеного значения нет в заметке, значит заметку нужно скрыть.
