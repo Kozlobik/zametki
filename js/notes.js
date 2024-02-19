@@ -85,11 +85,11 @@ const delTextFromAddInput = () => {
 }
 
 const filtreNotes = () => {
-   const searchNoteInputValue = searchNoteInput.value;
+   const searchNoteInputValue = searchNoteInput.value.toLowerCase();
    const allTextAreas = document.querySelectorAll('.note__text');
 
    allTextAreas.forEach(element => {
-      let noteTextValue = element.value;
+      let noteTextValue = element.value.toLowerCase();
       if(noteTextValue.indexOf(searchNoteInputValue) == -1){
          element.closest('.note').style.display = 'none';
       }  
