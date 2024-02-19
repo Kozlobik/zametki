@@ -20,7 +20,18 @@
 .star-svg {
     width: 45px;
     height: 45px;
+    fill: #A4A4A4;
 }
+
+.note__icon-star{
+    background-color: transparent;
+        &.active{
+            .star-svg{
+                fill: $starActiveColor;
+            }
+        }
+}
+
 .note__text {
     background-color: transparent;
     font-weight: 500;

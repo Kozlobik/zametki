@@ -3,7 +3,8 @@ const addNoteInput = document.querySelector('#inputAdd');
 const addNoteForm = document.querySelector('#addNoteForm');
 const notesList = document.querySelector('.notes__list');
 const allNotes = JSON.parse(localStorage.getItem('allNotes')) || [];
-const searchNoteInput = document.querySelector('#input-search');
+const searchNoteInput = document.querySelector('#input-search'); 
+
 
 // Функции.
 
@@ -54,11 +55,11 @@ const showAllNotes = (allNotes) => {
         const note = 
         `
         <li class="note">
-        <div class="note__icon-star">
+        <button class="note__icon-star">
            <svg class="star-svg">
               <use xlink:href = "#star"></use>
            </svg>
-        </div>
+        </button>
         <textarea class="note__text">${element}</textarea>
         <button class="trash-btn">
            <svg class="trash-svg">
@@ -123,7 +124,10 @@ notesList.addEventListener('click', (e) => {
 searchNoteInput.addEventListener('keyup', filtreNotes);
 
 
-
-// 1. Отслеживать изменения в инпуте. + 
-// 2. Проводить поиск значний серч инпута в заметках на странице.
-// 2.2 Если введеного значения нет в заметке, значит заметку нужно скрыть.
+notesList.addEventListener('click', (e) => {
+   const star = e.target;
+   
+   if (star.closest('.note__icon-star')) {
+      star.closest('.note__icon-star').classList.toggle('active');
+   }
+})

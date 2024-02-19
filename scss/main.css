@@ -568,6 +568,14 @@ body.dark-mode .note {
 .star-svg {
   width: 45px;
   height: 45px;
+  fill: #A4A4A4;
+}
+
+.note__icon-star {
+  background-color: transparent;
+}
+.note__icon-star.active .star-svg {
+  fill: rgb(254, 174, 0);
 }
 
 .note__text {
