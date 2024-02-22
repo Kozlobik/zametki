@@ -23,7 +23,13 @@
     font-family: sans-serif;
 
     &--search{
-        transform: translateX(40px);
+        padding-right: 40px;
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+        display: none;
+        }
     }
 
     @include focus-element;

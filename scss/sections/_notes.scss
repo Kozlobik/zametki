@@ -18,18 +18,36 @@
     justify-content: space-between;
 }
 .star-svg {
-    width: 45px;
-    height: 45px;
+   
     fill: #A4A4A4;
 }
 
 .note__icon-star{
+    width: 45px;
+    height: 45px;
     background-color: transparent;
-        &.active{
-            .star-svg{
-                fill: $starActiveColor;
-            }
+    
+
+    &--filter{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 10px;
+    }
+
+    &.active{
+        .star-svg{
+            fill: $starActiveColor;
         }
+    }
+
+}
+
+.note-filter{
+    display: flex;
+    position: relative;
+    width: 476px;
+    transform: translateX(40px);
 }
 
 .note__text {

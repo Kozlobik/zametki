@@ -39,8 +39,10 @@ img {
 }
 
 img, svg {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 address {
@@ -435,7 +437,10 @@ body.dark-mode .note {
   font-family: sans-serif;
 }
 .input--search {
-  transform: translateX(40px);
+  padding-right: 40px;
+}
+.input--search::-webkit-search-decoration, .input--search::-webkit-search-cancel-button, .input--search::-webkit-search-results-button, .input--search::-webkit-search-results-decoration {
+  display: none;
 }
 .input {
   position: relative;
@@ -566,16 +571,29 @@ body.dark-mode .note {
 }
 
 .star-svg {
-  width: 45px;
-  height: 45px;
   fill: #A4A4A4;
 }
 
 .note__icon-star {
+  width: 45px;
+  height: 45px;
   background-color: transparent;
+}
+.note__icon-star--filter {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 10px;
 }
 .note__icon-star.active .star-svg {
   fill: rgb(254, 174, 0);
+}
+
+.note-filter {
+  display: flex;
+  position: relative;
+  width: 476px;
+  transform: translateX(40px);
 }
 
 .note__text {
