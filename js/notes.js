@@ -4,7 +4,7 @@ const addNoteForm = document.querySelector('#addNoteForm');
 const notesList = document.querySelector('.notes__list');
 const allNotes = JSON.parse(localStorage.getItem('allNotes')) || [];
 const searchNoteInput = document.querySelector('#input-search'); 
-
+const noteFilter = document.querySelector('.note-filter');
 
 // Функции.
 
@@ -99,6 +99,15 @@ const filtreNotes = () => {
       }
    })
 }
+
+const dyeStarSearchButton = (e) => {
+   const star = e.target;
+   
+   if (star.closest('.note__icon-star')) {
+      star.closest('.note__icon-star').classList.toggle('active');
+   }
+}
+
 // События.
 
 showAllNotes(allNotes);
@@ -125,9 +134,9 @@ searchNoteInput.addEventListener('keyup', filtreNotes);
 
 
 notesList.addEventListener('click', (e) => {
-   const star = e.target;
-   
-   if (star.closest('.note__icon-star')) {
-      star.closest('.note__icon-star').classList.toggle('active');
-   }
+   dyeStarSearchButton(e);
+})
+
+noteFilter.addEventListener('click', (e) => {
+   dyeStarSearchButton(e);
 })
