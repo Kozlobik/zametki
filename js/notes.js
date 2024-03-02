@@ -8,13 +8,29 @@ const noteFilter = document.querySelector('.note-filter');
 
 // Функции.
 
+// Возвращать значение, передавать параметры.
+
+const createNewObject = (addNoteInputValue) => {
+   const note = {
+      value: addNoteInputValue,
+      isFavorite: false,
+   }
+   return note;
+   
+}
+
 const pushNewNote = () => {
     let addNoteInputValue = addNoteInput.value.trim();
     if (addNoteInputValue.length > 0) {
 
         renderNote(addNoteInputValue)
 
-        allNotes.push(addNoteInputValue)
+         // Нужно пушить объект заметки
+
+      const newNote = createNewObject(addNoteInputValue)
+      console.log(newNote);
+
+        allNotes.push(newNote)
 
         addToLocal(allNotes);
         
