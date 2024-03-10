@@ -22,13 +22,10 @@ const createNewObject = (addNoteInputValue) => {
 const pushNewNote = () => {
     let addNoteInputValue = addNoteInput.value.trim();
     if (addNoteInputValue.length > 0) {
-
-        renderNote(addNoteInputValue)
-
-         // Нужно пушить объект заметки
-
-      const newNote = createNewObject(addNoteInputValue)
-      console.log(newNote);
+       
+       const newNote = createNewObject(addNoteInputValue)
+       
+       renderNote(newNote)
 
         allNotes.push(newNote)
 
@@ -46,7 +43,7 @@ const addToLocal = (allNotes) => {
    localStorage.setItem('allNotes', JSON.stringify(allNotes));
 }
 
-const renderNote = (addNoteInputValue) => {
+const renderNote = (newNote) => {
     const note = 
     `
     <li class="note">
@@ -55,7 +52,7 @@ const renderNote = (addNoteInputValue) => {
           <use xlink:href = "#star"></use>
        </svg>
     </div>
-    <textarea class="note__text">${addNoteInputValue}</textarea>
+    <textarea class="note__text">${newNote.value}</textarea>
     <button class="trash-btn">
        <svg class="trash-svg">
           <use xlink:href = "#trash"></use>
@@ -64,6 +61,8 @@ const renderNote = (addNoteInputValue) => {
  </li>
     `;
     notesList.insertAdjacentHTML('afterbegin', note);
+
+   
 }
 
 const showAllNotes = (allNotes) => {
@@ -124,6 +123,12 @@ const dyeStarSearchButton = (e) => {
    }
 }
 
+const getTextValueFromNote = (e) => {
+   const note = e.target.closest('.note');
+   const noteTextArea = note.querySelector('.note__text');
+   const noteTextAreaValue = noteTextArea.value;
+   console.log(noteTextAreaValue);
+}
 // События.
 
 showAllNotes(allNotes);
@@ -151,6 +156,11 @@ searchNoteInput.addEventListener('keyup', filtreNotes);
 
 notesList.addEventListener('click', (e) => {
    dyeStarSearchButton(e);
+   if (e.target.closest('.note__icon-star')) {
+      getTextValueFromNote(e);
+      allNotes.forEach(objectNote => {
+      });
+   }
 })
 
 noteFilter.addEventListener('click', (e) => {
