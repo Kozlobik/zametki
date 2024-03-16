@@ -127,14 +127,29 @@ const getTextValueFromNote = (e) => {
    const note = e.target.closest('.note');
    const noteTextArea = note.querySelector('.note__text');
    const noteTextAreaValue = noteTextArea.value;
-   console.log(noteTextAreaValue);
+   return noteTextAreaValue;
 }
+
+const changeNoteStatus = (e) => {
+   if (e.target.closest('.note__icon-star')) {
+      const valueFromNote = getTextValueFromNote(e);
+      allNotes.forEach(objectNote => {
+         if (objectNote.value === valueFromNote){
+            if (!objectNote.isFavorite){
+               objectNote.isFavorite = true;
+               return
+            }
+            objectNote.isFavorite = false;
+         }
+      });
+   }
+}
+
 // События.
 
 showAllNotes(allNotes);
 
 addNoteForm.addEventListener('submit', pushNewNote);
-
 
 notesList.addEventListener('click', (e) => {
    const trashBtn = e.target;
@@ -148,19 +163,12 @@ notesList.addEventListener('click', (e) => {
    }
 })
 
-
-
-
 searchNoteInput.addEventListener('keyup', filtreNotes);
-
 
 notesList.addEventListener('click', (e) => {
    dyeStarSearchButton(e);
-   if (e.target.closest('.note__icon-star')) {
-      getTextValueFromNote(e);
-      allNotes.forEach(objectNote => {
-      });
-   }
+   changeNoteStatus(e);
+   addToLocal(allNotes);
 })
 
 noteFilter.addEventListener('click', (e) => {
