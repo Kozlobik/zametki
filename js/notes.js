@@ -8,15 +8,13 @@ const noteFilter = document.querySelector('.note-filter');
 
 // Функции.
 
-// Возвращать значение, передавать параметры.
-
 const createNewObject = (addNoteInputValue) => {
    const note = {
       value: addNoteInputValue,
       isFavorite: false,
+      id: allNotes.length + 1,
    }
    return note;
-   
 }
 
 const pushNewNote = () => {
@@ -46,7 +44,7 @@ const addToLocal = (allNotes) => {
 const renderNote = (newNote) => {
     const note = 
     `
-    <li class="note">
+    <li class="note" id="${newNote.id}">
     <div class="note__icon-star">
        <svg class="star-svg">
           <use xlink:href = "#star"></use>
@@ -67,15 +65,17 @@ const renderNote = (newNote) => {
 
 const showAllNotes = (allNotes) => {
     allNotes.forEach(element => {
+      let status;
+      element.isFavorite ? status = 'active' : status = '';
         const note = 
         `
         <li class="note">
-        <button class="note__icon-star">
+        <button class="note__icon-star ${status}">
            <svg class="star-svg">
               <use xlink:href = "#star"></use>
            </svg>
         </button>
-        <textarea class="note__text">${element}</textarea>
+        <textarea class="note__text">${element.value}</textarea>
         <button class="trash-btn">
            <svg class="trash-svg">
               <use xlink:href = "#trash"></use>
@@ -174,3 +174,16 @@ notesList.addEventListener('click', (e) => {
 noteFilter.addEventListener('click', (e) => {
    dyeStarSearchButton(e);
 })
+
+
+//// Добавление айди!
+
+//// 1. в объект заметки добавить свойство айди
+//// 2. перебрать циклом все заметки и проверитьь что в текущей заметке айди на 1 болше чем у предидущей!!!!
+//// 2.1. проверить что предидущая заметка существует
+
+// Удаление айди!
+
+// 1. найти нужную заметку в массиве
+// 2. у всех следующих уменьшить id на 1
+// 3. запустить перерендер чтобы изменить idшки в разметке????
