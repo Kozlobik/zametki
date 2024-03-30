@@ -87,10 +87,15 @@ const showAllNotes = (allNotes) => {
     });
 }
 
-const delNoteFromStorage = (noteText) => {
-   const noteIndex = allNotes.indexOf(noteText);
-   allNotes.splice(noteIndex, 1);
-   addToLocal(allNotes);
+// const delNoteFromStorage = (noteText) => {
+//    const noteIndex = allNotes.indexOf(noteText);
+//    allNotes.splice(noteIndex, 1);
+//    addToLocal(allNotes);
+// }
+const delNoteFromStorage = (noteId) => {
+   // const noteIndex = allNotes.indexOf(noteText);
+   // allNotes.splice(noteIndex, 1);
+   // addToLocal(allNotes);
 }
 const delNoteFromRender = (currentNote) => {
    currentNote.remove()
@@ -158,8 +163,13 @@ notesList.addEventListener('click', (e) => {
       const currentNote = trashBtn.closest('.note');
       const noteInput = currentNote.querySelector('.note__text');
       const noteText = noteInput.value;
-      delNoteFromStorage(noteText);
-      delNoteFromRender(currentNote)
+
+      allNotes.forEach(eachNote => {
+         if (currentNote.id === eachNote) {
+            delNoteFromStorage(noteText);
+            delNoteFromRender(currentNote)
+         }
+      })
    }
 })
 
@@ -182,8 +192,11 @@ noteFilter.addEventListener('click', (e) => {
 //// 2. перебрать циклом все заметки и проверитьь что в текущей заметке айди на 1 болше чем у предидущей!!!!
 //// 2.1. проверить что предидущая заметка существует
 
+
+
 // Удаление айди!
 
-// 1. найти нужную заметку в массиве
+//// 1. найти нужную заметку в массиве
+// 1. удалить заметку из массива используя id
 // 2. у всех следующих уменьшить id на 1
 // 3. запустить перерендер чтобы изменить idшки в разметке????
