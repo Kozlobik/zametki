@@ -12,7 +12,7 @@ const createNewObject = (addNoteInputValue) => {
    const note = {
       value: addNoteInputValue,
       isFavorite: false,
-      id: allNotes.length + 1,
+      id: allNotes.length,
    }
    return note;
 }
@@ -69,7 +69,7 @@ const showAllNotes = (allNotes) => {
       element.isFavorite ? status = 'active' : status = '';
         const note = 
         `
-        <li class="note">
+        <li class="note" id="${element.id}>
         <button class="note__icon-star ${status}">
            <svg class="star-svg">
               <use xlink:href = "#star"></use>
@@ -87,15 +87,16 @@ const showAllNotes = (allNotes) => {
     });
 }
 
-// const delNoteFromStorage = (noteText) => {
-//    const noteIndex = allNotes.indexOf(noteText);
-//    allNotes.splice(noteIndex, 1);
-//    addToLocal(allNotes);
-// }
 const delNoteFromStorage = (noteId) => {
-   // const noteIndex = allNotes.indexOf(noteText);
-   // allNotes.splice(noteIndex, 1);
-   // addToLocal(allNotes);
+
+   allNotes.forEach(eachNote => {
+      if (+noteId === eachNote.id) {
+         allNotes.splice(+noteId, 1);
+         addToLocal(allNotes);
+         console.log(noteId);
+         console.log(allNotes);
+      }            
+   })
 }
 const delNoteFromRender = (currentNote) => {
    currentNote.remove()
@@ -161,15 +162,8 @@ notesList.addEventListener('click', (e) => {
 
    if (trashBtn.closest('.trash-btn')) {
       const currentNote = trashBtn.closest('.note');
-      const noteInput = currentNote.querySelector('.note__text');
-      const noteText = noteInput.value;
-
-      allNotes.forEach(eachNote => {
-         if (currentNote.id === eachNote) {
-            delNoteFromStorage(noteText);
-            delNoteFromRender(currentNote)
-         }
-      })
+      delNoteFromStorage(currentNote.id);
+      delNoteFromRender(currentNote);
    }
 })
 
@@ -197,6 +191,6 @@ noteFilter.addEventListener('click', (e) => {
 // Удаление айди!
 
 //// 1. найти нужную заметку в массиве
-// 1. удалить заметку из массива используя id
+//// 1. удалить заметку из массива используя id
 // 2. у всех следующих уменьшить id на 1
-// 3. запустить перерендер чтобы изменить idшки в разметке????
+//// 3. запустить перерендер чтобы изменить idшки в разметке????
