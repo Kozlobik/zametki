@@ -45,11 +45,11 @@ const renderNote = (newNote) => {
     const note = 
     `
     <li class="note" id="${newNote.id}">
-    <div class="note__icon-star">
+    <button class="note__icon-star">
        <svg class="star-svg">
           <use xlink:href = "#star"></use>
        </svg>
-    </div>
+    </button>
     <textarea class="note__text">${newNote.value}</textarea>
     <button class="trash-btn">
        <svg class="trash-svg">
@@ -67,21 +67,22 @@ const showAllNotes = (allNotes) => {
     allNotes.forEach(element => {
       let status;
       element.isFavorite ? status = 'active' : status = '';
+
         const note = 
         `
-        <li class="note" id="${element.id}>
-        <button class="note__icon-star ${status}">
-           <svg class="star-svg">
-              <use xlink:href = "#star"></use>
-           </svg>
-        </button>
-        <textarea class="note__text">${element.value}</textarea>
-        <button class="trash-btn">
-           <svg class="trash-svg">
-              <use xlink:href = "#trash"></use>
-           </svg>
-        </button>
-     </li>
+         <li class="note" id="${element.id}">
+            <button class="note__icon-star${status}">
+               <svg class="star-svg">
+                  <use xlink:href = "#star"></use>
+               </svg>
+            </button>
+            <textarea class="note__text">${element.value}</textarea>
+            <button class="trash-btn">
+               <svg class="trash-svg">
+                  <use xlink:href = "#trash"></use>
+               </svg>
+            </button>
+         </li>
         `;
         notesList.insertAdjacentHTML('afterbegin', note);
     });
