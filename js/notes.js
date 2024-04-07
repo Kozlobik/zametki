@@ -71,7 +71,7 @@ const showAllNotes = (allNotes) => {
         const note = 
         `
          <li class="note" id="${element.id}">
-            <button class="note__icon-star${status}">
+            <button class="note__icon-star ${status}">
                <svg class="star-svg">
                   <use xlink:href = "#star"></use>
                </svg>
