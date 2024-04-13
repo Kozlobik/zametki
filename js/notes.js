@@ -89,15 +89,16 @@ const showAllNotes = (allNotes) => {
 }
 
 const delNoteFromStorage = (noteId) => {
-
-   allNotes.forEach(eachNote => {
-      if (+noteId === eachNote.id) {
+   for (let i = 0; i < allNotes.length; i++) {
+      if (+noteId === allNotes[i].id) {
+         for (let j = +noteId + 1; j < allNotes.length; j++) {
+            console.log(allNotes[j].id);
+            allNotes[j].id = allNotes[j].id - 1;
+         }
          allNotes.splice(+noteId, 1);
          addToLocal(allNotes);
-         console.log(noteId);
-         console.log(allNotes);
-      }            
-   })
+      }
+   }
 }
 const delNoteFromRender = (currentNote) => {
    currentNote.remove()
@@ -152,6 +153,12 @@ const changeNoteStatus = (e) => {
    }
 }
 
+const reduceId = () => {
+   for (let currentId; currentId < allNotes.length; currentId++) {
+      
+   }
+}
+
 // События.
 
 showAllNotes(allNotes);
@@ -179,19 +186,3 @@ notesList.addEventListener('click', (e) => {
 noteFilter.addEventListener('click', (e) => {
    dyeStarSearchButton(e);
 })
-
-
-//// Добавление айди!
-
-//// 1. в объект заметки добавить свойство айди
-//// 2. перебрать циклом все заметки и проверитьь что в текущей заметке айди на 1 болше чем у предидущей!!!!
-//// 2.1. проверить что предидущая заметка существует
-
-
-
-// Удаление айди!
-
-//// 1. найти нужную заметку в массиве
-//// 1. удалить заметку из массива используя id
-// 2. у всех следующих уменьшить id на 1
-//// 3. запустить перерендер чтобы изменить idшки в разметке????
