@@ -627,4 +627,14 @@ body.dark-mode .note {
   height: 30px;
   fill: #000;
   transition: 500ms;
+}
+
+.redactor-btn {
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+}
+
+.redactor-svg {
+  fill: #434343;
 }/*# sourceMappingURL=main.css.map */
