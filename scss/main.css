@@ -564,10 +564,20 @@ body.dark-mode .note {
   background-color: #d9d9d9;
   max-width: 80%;
   margin: 0 auto;
+}
+
+.note__header {
   padding-left: 10px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+}
+
+.note__heading {
+  align-self: center;
+  min-height: auto;
+  width: 100%;
+  padding: 0 10px;
 }
 
 .star-svg {
@@ -589,6 +599,13 @@ body.dark-mode .note {
   fill: rgb(254, 174, 0);
 }
 
+.note__main-list-control {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
 .note-filter {
   display: flex;
   position: relative;
@@ -600,10 +617,12 @@ body.dark-mode .note {
   background-color: transparent;
   font-weight: 500;
   font-size: 1.7em;
-  max-width: 70%;
   width: 100%;
   min-height: 70px;
   resize: none;
+}
+.note__text.view {
+  height: 400px;
 }
 
 .trash-btn {
@@ -630,9 +649,18 @@ body.dark-mode .note {
 }
 
 .redactor-btn {
-  width: 35px;
-  height: 35px;
+  padding: 9px 9px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
   background-color: transparent;
+  transition: 400ms;
+}
+.redactor-btn:hover {
+  background-color: #ffcc25;
+}
+.redactor-btn:active {
+  background-color: rgb(246, 193, 0);
 }
 
 .redactor-svg {

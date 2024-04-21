@@ -1,24 +1,29 @@
 .notes {
     padding-top: 50px;
 }
-.container {
-}
-.notes__content {
-}
-.notes__list {
-}
+
 .note {
     min-height: 70px; 
     background-color: $bgElementDefault;
     max-width: 80%;
     margin: 0 auto;
+}
+
+.note__header{
     padding-left: 10px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
+
+.note__heading{
+    align-self: center;
+    min-height: auto;
+    width: 100%;
+    padding: 0 10px;
+}
+
 .star-svg {
-   
     fill: #A4A4A4;
 }
 
@@ -43,6 +48,12 @@
 
 }
 
+.note__main-list-control{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
 .note-filter{
     display: flex;
     position: relative;
@@ -54,10 +65,13 @@
     background-color: transparent;
     font-weight: 500;
     font-size: 1.7em;
-    max-width: 70%;
     width: 100%;
     min-height: 70px;
     resize: none;
+
+    &.view{
+        height: 400px;
+    }
 }
 
 .trash-btn{
@@ -76,11 +90,36 @@
 }
 
 .redactor-btn {
-    width: 35px;
-    height: 35px;
+    padding: 9px 9px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
     background-color: transparent;
+    transition: 400ms;
+    
+    &:hover{
+        background-color: #ffcc25;
+    }
+
+    &:active{
+        background-color: rgb(246, 193, 0);
+    }
 }
 
 .redactor-svg {
     fill: #434343;
+}
+.note.open{
+    .note__body {
+    }
+    .note__text {
+    }
+    .note__redact-list-control {
+    }
+    .note__action-btn {
+    }
+    .note__action-btn--save {
+    }
+    .note__action-btn--cancel {
+    }
 }

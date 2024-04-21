@@ -153,23 +153,46 @@
                <div class="notes__content">
 
                   <ul class="notes__list">
-                     <li class="note" id="${newNote.id}">
-                        <button class="note__icon-star">
-                           <svg class="star-svg">
-                              <use xlink:href = "#star"></use>
-                           </svg>
-                        </button>
-                        <textarea class="note__text">${newNote.value}</textarea>
-                        <button class="redactor-btn">
-                           <svg class="redactor-svg">
-                              <use xlink:href = "#redactor"></use>
-                           </svg>
-                        </button>
-                        <button class="trash-btn">
-                           <svg class="trash-svg">
-                              <use xlink:href = "#trash"></use>
-                           </svg>
-                        </button>
+                     <li class="note open" id="">
+                        <header class="note__header">
+                           <button class="note__icon-star">
+                              <svg class="star-svg">
+                                 <use xlink:href = "#star"></use>
+                              </svg>
+                           </button>
+                           <p class="note__heading">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, accusamus.</p>
+                           <ul class="note__main-list-control">
+                              <li>
+                                 <button class="redactor-btn">
+                                    <svg class="redactor-svg">
+                                       <use xlink:href = "#redactor"></use>
+                                    </svg>
+                                 </button>
+                              </li>
+                              <li>
+                                 <button class="trash-btn">
+                                    <svg class="trash-svg">
+                                       <use xlink:href = "#trash"></use>
+                                    </svg>
+                                 </button>
+                              </li>
+                           </ul>
+                        </header>
+                        <article class="note__body">
+                           <textarea class="note__text"></textarea>
+                           <ul class="note__redact-list-control">
+                              <li class="">
+                                 <button class="note__action-btn note__action-btn--save">
+                                    Save
+                                 </button>
+                              </li>
+                              <li class="">
+                                 <button class="note__action-btn note__action-btn--cancel">
+                                    Cancel
+                                 </button>
+                              </li>
+                           </ul>
+                        </article>
                      </li>
                   </ul>
 
