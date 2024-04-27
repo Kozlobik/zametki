@@ -37,6 +37,10 @@ body.green{
     .night-mode{
         background-color: $headerBgDefault;
     }
+
+    .note__action-btn--save{
+        background-color: $headerBgDefault;
+    }
 }
 
 body.green.dark-mode{
@@ -82,6 +86,10 @@ body.yellow{
     }
 
     .night-mode{
+        background-color: $headerBgYellow;
+    }
+
+    .note__action-btn--save{
         background-color: $headerBgYellow;
     }
 }
@@ -131,6 +139,10 @@ body.purple{
     .night-mode{
         background-color: $headerBgPurple;
     }
+    
+    .note__action-btn--save{
+        background-color: $headerBgPurple;
+    }
 }
 
 body.purple.dark-mode{
@@ -177,6 +189,10 @@ body.blue{
     .night-mode{
         background-color: $headerBgBlue;
     }
+
+    .note__action-btn--save{
+        background-color: $headerBgBlue;
+    }
 }
 
 body.blue.dark-mode{
@@ -221,6 +237,10 @@ body.red{
     }
 
     .night-mode{
+        background-color: $headerBgRed;
+    }
+
+    .note__action-btn--save{
         background-color: $headerBgRed;
     }
 }
