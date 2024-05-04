@@ -41,6 +41,14 @@ body.green{
     .note__action-btn--save{
         background-color: $headerBgDefault;
     }
+
+    .note__action-btn--save{
+        @include hover-add-btn($headerBgDefault, $headerBgDefault, $bgLightBodyColor)
+    }
+
+    .note__action-btn--cancel{
+        @include hover-add-btn($headerBgDefault, $headerBgDefault, $bgLightBodyColor)
+    }
 }
 
 body.green.dark-mode{
@@ -91,6 +99,14 @@ body.yellow{
 
     .note__action-btn--save{
         background-color: $headerBgYellow;
+    }
+
+    .note__action-btn--save{
+        @include hover-add-btn($headerBgYellow, $headerBgYellow, $bgLightBodyColor)
+    }
+
+    .note__action-btn--cancel{
+        @include hover-add-btn($headerBgYellow, $headerBgYellow, $bgLightBodyColor)
     }
 }
 
@@ -143,6 +159,14 @@ body.purple{
     .note__action-btn--save{
         background-color: $headerBgPurple;
     }
+
+    .note__action-btn--save{
+        @include hover-add-btn($headerBgPurple, $headerBgPurple, $bgLightBodyColor)
+    }
+
+    .note__action-btn--cancel{
+        @include hover-add-btn($headerBgPurple, $headerBgPurple, $bgLightBodyColor)
+    }
 }
 
 body.purple.dark-mode{
@@ -193,6 +217,14 @@ body.blue{
     .note__action-btn--save{
         background-color: $headerBgBlue;
     }
+
+    .note__action-btn--save{
+        @include hover-add-btn($headerBgBlue, $headerBgBlue, $bgLightBodyColor)
+    }
+
+    .note__action-btn--cancel{
+        @include hover-add-btn($headerBgBlue, $headerBgBlue, $bgLightBodyColor)
+    }
 }
 
 body.blue.dark-mode{
@@ -242,6 +274,14 @@ body.red{
 
     .note__action-btn--save{
         background-color: $headerBgRed;
+    }
+
+    .note__action-btn--save{
+        @include hover-add-btn($headerBgRed, $headerBgRed, $bgLightBodyColor)
+    }
+
+    .note__action-btn--cancel{
+        @include hover-add-btn($headerBgRed, $headerBgRed, $bgLightBodyColor)
     }
 }
 

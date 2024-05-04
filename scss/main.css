@@ -250,6 +250,16 @@ body.green .night-mode {
 body.green .note__action-btn--save {
   background-color: #007F60;
 }
+body.green .note__action-btn--save:hover {
+  border-color: #007F60;
+  background-color: #ffffff;
+  color: #007F60;
+}
+body.green .note__action-btn--cancel:hover {
+  border-color: #007F60;
+  background-color: #ffffff;
+  color: #007F60;
+}
 
 body.green.dark-mode .submit-btn:hover {
   border-color: #007F60;
@@ -288,6 +298,16 @@ body.yellow .night-mode {
 }
 body.yellow .note__action-btn--save {
   background-color: rgb(255, 174, 0);
+}
+body.yellow .note__action-btn--save:hover {
+  border-color: rgb(255, 174, 0);
+  background-color: #ffffff;
+  color: rgb(255, 174, 0);
+}
+body.yellow .note__action-btn--cancel:hover {
+  border-color: rgb(255, 174, 0);
+  background-color: #ffffff;
+  color: rgb(255, 174, 0);
 }
 
 body.yellow.dark-mode .submit-btn:hover {
@@ -328,6 +348,16 @@ body.purple .night-mode {
 body.purple .note__action-btn--save {
   background-color: #8e2fa6;
 }
+body.purple .note__action-btn--save:hover {
+  border-color: #8e2fa6;
+  background-color: #ffffff;
+  color: #8e2fa6;
+}
+body.purple .note__action-btn--cancel:hover {
+  border-color: #8e2fa6;
+  background-color: #ffffff;
+  color: #8e2fa6;
+}
 
 body.purple.dark-mode .submit-btn:hover {
   border-color: #8e2fa6;
@@ -367,6 +397,16 @@ body.blue .night-mode {
 body.blue .note__action-btn--save {
   background-color: #2a46ff;
 }
+body.blue .note__action-btn--save:hover {
+  border-color: #2a46ff;
+  background-color: #ffffff;
+  color: #2a46ff;
+}
+body.blue .note__action-btn--cancel:hover {
+  border-color: #2a46ff;
+  background-color: #ffffff;
+  color: #2a46ff;
+}
 
 body.blue.dark-mode .submit-btn:hover {
   border-color: #2a46ff;
@@ -405,6 +445,16 @@ body.red .night-mode {
 }
 body.red .note__action-btn--save {
   background-color: #ab3333;
+}
+body.red .note__action-btn--save:hover {
+  border-color: #ab3333;
+  background-color: #ffffff;
+  color: #ab3333;
+}
+body.red .note__action-btn--cancel:hover {
+  border-color: #ab3333;
+  background-color: #ffffff;
+  color: #ab3333;
 }
 
 body.red.dark-mode .submit-btn:hover {
@@ -694,6 +744,7 @@ body.dark-mode .note {
   font-weight: 900;
   font-size: 1.25rem;
   border-radius: 4px;
+  transition: 500ms;
 }
 .note.open .note__action-btn--save {
   color: white;
