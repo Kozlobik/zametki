@@ -123,13 +123,10 @@ const filtreNotes = () => {
    })
 }
 
-const dyeStarSearchButton = (e) => {
-   const star = e.target;
+const dyeStarSearchButton = (targetElement) => { 
    
-   if (star.closest('.note__icon-star')) {
-      star.closest('.note__icon-star').classList.toggle('active');
-   }
-}
+   targetElement.classList.toggle('active');
+};
 
 const getTextValueFromNote = (e) => {
    const note = e.target.closest('.note');
@@ -139,18 +136,16 @@ const getTextValueFromNote = (e) => {
 }
 
 const changeNoteStatus = (e) => {
-   if (e.target.closest('.note__icon-star')) {
-      const valueFromNote = getTextValueFromNote(e);
-      allNotes.forEach(objectNote => {
-         if (objectNote.value === valueFromNote){
-            if (!objectNote.isFavorite){
-               objectNote.isFavorite = true;
-               return
-            }
-            objectNote.isFavorite = false;
+   const valueFromNote = getTextValueFromNote(e);
+   allNotes.forEach(objectNote => {
+      if (objectNote.value === valueFromNote){
+         if (!objectNote.isFavorite){
+            objectNote.isFavorite = true;
+            return
          }
-      });
-   }
+         objectNote.isFavorite = false;
+      }
+   });
 }
 
 const reduceId = () => {
@@ -166,23 +161,39 @@ showAllNotes(allNotes);
 addNoteForm.addEventListener('submit', pushNewNote);
 
 notesList.addEventListener('click', (e) => {
-   const trashBtn = e.target;
+   const targetElement = e.target;
 
-   if (trashBtn.closest('.trash-btn')) {
-      const currentNote = trashBtn.closest('.note');
+   
+
+   if (targetElement.closest('.trash-btn')) {
+      const currentNote = targetElement.closest('.note');
       delNoteFromStorage(currentNote.id);
       delNoteFromRender(currentNote);
    }
+
+   if (targetElement.closest('.note__icon-star')){
+      console.log(targetElement);
+      const starBtn = targetElement.closest('.note__icon-star');
+      dyeStarSearchButton(starBtn);
+   }
+
+
+
+   changeNoteStatus(e);
 })
 
 searchNoteInput.addEventListener('keyup', filtreNotes);
 
 notesList.addEventListener('click', (e) => {
    dyeStarSearchButton(e);
-   changeNoteStatus(e);
    addToLocal(allNotes);
 })
 
 noteFilter.addEventListener('click', (e) => {
    dyeStarSearchButton(e);
 })
+
+
+// refactor event click on the note list
+// fix layout
+// to do reduce id
