@@ -45,17 +45,19 @@ const renderNote = (newNote) => {
     const note = 
     `
     <li class="note" id="${newNote.id}">
-    <button class="note__icon-star">
-       <svg class="star-svg">
-          <use xlink:href = "#star"></use>
-       </svg>
-    </button>
-    <textarea class="note__text">${newNote.value}</textarea>
-    <button class="trash-btn">
-       <svg class="trash-svg">
-          <use xlink:href = "#trash"></use>
-       </svg>
-    </button>
+   <div class="note__header">
+       <button class="note__icon-star">
+          <svg class="star-svg">
+             <use xlink:href = "#star"></use>
+          </svg>
+       </button>
+       <textarea class="note__text">${newNote.value}</textarea>
+       <button class="trash-btn">
+          <svg class="trash-svg">
+             <use xlink:href = "#trash"></use>
+          </svg>
+       </button>
+   </div>
  </li>
     `;
     notesList.insertAdjacentHTML('afterbegin', note);
@@ -92,7 +94,6 @@ const delNoteFromStorage = (noteId) => {
    for (let i = 0; i < allNotes.length; i++) {
       if (+noteId === allNotes[i].id) {
          for (let j = +noteId + 1; j < allNotes.length; j++) {
-            console.log(allNotes[j].id);
             allNotes[j].id = allNotes[j].id - 1;
          }
          allNotes.splice(+noteId, 1);
@@ -172,7 +173,6 @@ notesList.addEventListener('click', (e) => {
    }
 
    if (targetElement.closest('.note__icon-star')){
-      console.log(targetElement);
       const starBtn = targetElement.closest('.note__icon-star');
       dyeStarSearchButton(starBtn);
    }
@@ -194,6 +194,6 @@ noteFilter.addEventListener('click', (e) => {
 })
 
 
-// refactor event click on the note list
+
 // fix layout
 // to do reduce id
