@@ -45,7 +45,7 @@ const renderNote = (newNote) => {
     const note = 
     `
     <li class="note" id="${newNote.id}">
-   <div class="note__header">
+   <header class="note__header">
        <button class="note__icon-star">
           <svg class="star-svg">
              <use xlink:href = "#star"></use>
@@ -57,7 +57,7 @@ const renderNote = (newNote) => {
              <use xlink:href = "#trash"></use>
           </svg>
        </button>
-   </div>
+   </header>
  </li>
     `;
     notesList.insertAdjacentHTML('afterbegin', note);
@@ -73,17 +73,19 @@ const showAllNotes = (allNotes) => {
         const note = 
         `
          <li class="note" id="${element.id}">
-            <button class="note__icon-star ${status}">
-               <svg class="star-svg">
-                  <use xlink:href = "#star"></use>
-               </svg>
-            </button>
-            <textarea class="note__text">${element.value}</textarea>
-            <button class="trash-btn">
-               <svg class="trash-svg">
-                  <use xlink:href = "#trash"></use>
-               </svg>
-            </button>
+         <header class="note__header">
+               <button class="note__icon-star ${status}">
+                  <svg class="star-svg">
+                     <use xlink:href = "#star"></use>
+                  </svg>
+               </button>
+               <textarea class="note__text">${element.value}</textarea>
+               <button class="trash-btn">
+                  <svg class="trash-svg">
+                     <use xlink:href = "#trash"></use>
+                  </svg>
+               </button>
+         </header>
          </li>
         `;
         notesList.insertAdjacentHTML('afterbegin', note);
@@ -195,5 +197,6 @@ noteFilter.addEventListener('click', (e) => {
 
 
 
-// fix layout
-// to do reduce id
+// дописать функцию уменьшения id для всех последующих заметок после удалённой заметки
+//скрыть из разметки интерфейс редактирования заметки (display: none), если на заметке нет класса open
+//
