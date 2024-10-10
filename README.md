@@ -1,1 +1,1 @@
-# zametki
+# rockPaperScissors
